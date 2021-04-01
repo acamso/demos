@@ -1,0 +1,17 @@
+*.bak
+*.egg-info
+.done.list
+.env
+.mongorc.js
+.venv
+Session.vim
+checklist.md
+debug
+extra
+logs
+pytest.ini
+todo.list
+import.css
+root.css
+scratch.*
+delete.*
