@@ -3,7 +3,17 @@
 # 04-02-2021 03:08:34 EDT
 # (c) 2021 acamso
 
-"""Sends TXT message with GMail."""
+"""Sends TXT message with GMail.
+
+This is a demonstration on how to send an text message with Python.
+In this example, we use GMail to send the SMS message,
+but any host can work with the correct SMTP settings.
+Each carrier has a unique SMS gateway hostname.
+This method is completely free and can be useful in a variety of ways.
+
+Video: https://youtu.be/hKxtMaa2hwQ
+Turn on: https://myaccount.google.com/lesssecureapps
+"""
 
 import asyncio
 import re
@@ -13,7 +23,7 @@ from typing import Tuple
 import aiosmtplib
 
 HOST = "smtp.gmail.com"
-CARRIER_MAP = {  # https://www.gmass.co/blog/send-text-from-gmail/ 
+CARRIER_MAP = {  # https://www.gmass.co/blog/send-text-from-gmail/
     "verizon": "vtext.com",
     "tmobile": "tmomail.net",
     "sprint": "messaging.sprintpcs.com",
