@@ -23,7 +23,9 @@ from typing import Tuple
 import aiosmtplib
 
 HOST = "smtp.gmail.com"
-CARRIER_MAP = {  # https://www.gmass.co/blog/send-text-from-gmail/
+# https://kb.sandisk.com/app/answers/detail/a_id/17056/~/list-of-mobile-carrier-gateway-addresses
+# https://www.gmass.co/blog/send-text-from-gmail/
+CARRIER_MAP = {
     "verizon": "vtext.com",
     "tmobile": "tmomail.net",
     "sprint": "messaging.sprintpcs.com",
