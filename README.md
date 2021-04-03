@@ -5,4 +5,5 @@ This repository hosts demonstrative scripts written for my [YouTube channel](htt
 
 ## Installation
 ```poetry install```
+
 Requires [Poetry](https://github.com/python-poetry/poetry)
