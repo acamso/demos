@@ -18,7 +18,7 @@ Turn on: https://myaccount.google.com/lesssecureapps
 import asyncio
 import re
 from email.message import EmailMessage
-from typing import Tuple
+from typing import Tuple, Union
 
 import aiosmtplib
 
