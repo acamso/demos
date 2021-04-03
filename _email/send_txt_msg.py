@@ -36,9 +36,10 @@ CARRIER_MAP = {
 }
 
 
-async def send_txt(*args: str) -> Tuple[dict, str]:
-    num, carrier, email, pword, msg, subj = args
-    num = str(num)
+# pylint: disable=too-many-arguments
+async def send_txt(
+    num: Union[str, int], carrier: str, email: str, pword: str, msg: str, subj: str
+) -> Tuple[dict, str]:
     to_email = CARRIER_MAP[carrier]
 
     # build message
