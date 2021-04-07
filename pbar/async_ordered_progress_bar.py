@@ -3,7 +3,15 @@
 # 04-06-2021 16:03:16 EDT
 # (c) 2021 acamso
 
-"""Async ordered progress bar."""
+"""Async ordered progress bar.
+
+This is a demonstration on how to implement an async, ordered progress bar with TQDM + asyncio. 
+"asyncio.as_completed" is needed to run async tasks with TQDM , which results in an unordered result. 
+If you're looking for an ordered result, you simply need to wrap each task in a coroutine with the 
+corresponding index and sort the result.
+
+Video: https://youtu.be/oJC7RcjbEPc
+"""
 
 import asyncio
 from typing import Any, Coroutine, Iterable, List, Tuple
