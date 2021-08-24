@@ -7,7 +7,7 @@
 
 This is a demonstration on how to build a craps simulator with Python.
 
-Video #1 - Rolling The Dice: _
+Video #1 - Rolling The Dice: https://youtu.be/I80qwc7vLFs
 Craps: https://en.wikipedia.org/wiki/Craps
 """
 
