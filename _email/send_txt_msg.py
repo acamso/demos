@@ -18,7 +18,7 @@ Turn on: https://myaccount.google.com/lesssecureapps
 import asyncio
 import re
 from email.message import EmailMessage
-from typing import Tuple, Union
+from typing import Collection, List, Tuple, Union
 
 import aiosmtplib
 
@@ -57,6 +57,13 @@ async def send_txt(
     return res
 
 
+async def send_txts(
+    nums: Collection[Union[str, int]], carrier: str, email: str, pword: str, msg: str, subj: str
+) -> List[Tuple[dict, str]]:
+    tasks = [send_txt(n, carrier, email, pword, msg, subj) for n in set(nums)]
+    return await asyncio.gather(*tasks)
+
+
 if __name__ == "__main__":
     _num = "999999999"
     _carrier = "verizon"
@@ -65,4 +72,6 @@ if __name__ == "__main__":
     _msg = "Dummy msg"
     _subj = "Dummy subj"
     coro = send_txt(_num, _carrier, _email, _pword, _msg, _subj)
+    # _nums = {"999999999", "000000000"}
+    # coro = send_txts(_nums, _carrier, _email, _pword, _msg, _subj)
     asyncio.run(coro)
